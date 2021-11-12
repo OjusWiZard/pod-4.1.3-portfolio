@@ -1,233 +1,240 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
-@import 'navbar';
-@import 'profile';
-@import 'page';
-@import 'project';
-@import 'map';
-@import 'loader';
-@import 'description';
-@import 'scrollButton';
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+@import "navbar";
+@import "profile";
+@import "page";
+@import "project";
+@import "map";
+@import "loader";
+@import "description";
+@import "scrollButton";
 
-*{
+* {
   scroll-behavior: smooth;
 }
 
 body {
-	background-color: #f5f5f9;
-	margin-bottom: 50px;
+  background-color: #f5f5f9;
+  margin-bottom: 50px;
 }
 h2 {
-	margin-bottom: 20px;
-	margin-top: 20px;
-	font-weight: 700;
-	text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.heading {
+  font-size: 35px;
+  @media screen and (max-width: 500px) {
+    font-size: 25px;
+  }
 }
 
 .card {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	margin: 20px 30px;
-	background-color: white;
-	border-radius: 0.375rem;
-	padding: 1.5em;
-	font-size: 1.2em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 20px 30px;
+  background-color: white;
+  border-radius: 0.375rem;
+  padding: 1.5em;
+  font-size: 1.2em;
 }
 
 a {
-	color: black;
+  color: black;
 }
 
 .info {
-	p {
-		margin-top: 5px;
-		margin: 0px;
-		text-align: left;
-	}
+  p {
+    margin-top: 5px;
+    margin: 0px;
+    text-align: left;
+  }
 
-	.title {
-		font-size: 500;
-		font-weight: bold;
-	}
+  .title {
+    font-size: 500;
+    font-weight: bold;
+  }
 
-	.location,
-	.description {
-		font-size: medium;
-		font-weight: 400;
-	}
+  .location,
+  .description {
+    font-size: medium;
+    font-weight: 400;
+  }
 
-	.dates {
-		font-size: small;
-		color: #404040;
-	}
+  .dates {
+    font-size: small;
+    color: #404040;
+  }
 }
 
 .icon {
-	width: 70px;
-	height: 70px;
-	margin-right: 20px;
-	padding: 10px;
+  width: 70px;
+  height: 70px;
+  margin-right: 20px;
+  padding: 10px;
 
-	img {
-		width: 100%;
-	}
+  img {
+    width: 100%;
+  }
 }
 
 .card-container {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	font-family: 'Open Sans', sans-serif;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  font-family: "Open Sans", sans-serif;
 }
 
 .card-leaderboard {
-	width: 45% !important;
+  width: 45% !important;
 }
 
 .card-title {
-	font-weight: 700;
+  font-weight: 700;
 }
 .card-subtitle {
-	font-weight: 600;
-	text-align: center;
-	margin: 5px;
+  font-weight: 600;
+  text-align: center;
+  margin: 5px;
 }
 .card-text {
-	display: flex;
-	justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 .center-content {
-	display: flex;
-	justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .github-image {
-	border-radius: 50%;
-	width: 100px;
-	height: 100px;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
 }
 
 .label {
-	margin: 5px auto;
-	font-size: 0.9rem;
+  margin: 5px auto;
+  font-size: 0.9rem;
 }
 
 .leaderboard-table {
-	margin: 40px 90px;
+  margin: 40px 90px;
 }
 
 @media only screen and (max-width: 1500px) {
-	.card-container {
-		grid-template-columns: repeat(3, 1fr);
-	}
-	.card-leaderboard {
-		width: 50% !important;
-	}
+  .card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .card-leaderboard {
+    width: 50% !important;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
-	.card-container {
-		grid-template-columns: repeat(2, 1fr);
-	}
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-	.card-leaderboard {
-		width: 50% !important;
-	}
+  .card-leaderboard {
+    width: 50% !important;
+  }
 
-	.github-image {
-		border-radius: 50%;
-		width: 75px;
-		height: 75px;
-	}
+  .github-image {
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+  }
 
-	.leaderboard-table {
-		margin: 30px 70px;
-	}
+  .leaderboard-table {
+    margin: 30px 70px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
-	.card-container {
-		grid-template-columns: 1fr;
-	}
+  .card-container {
+    grid-template-columns: 1fr;
+  }
 
-	.card-leaderboard {
-		width: 75% !important;
-		background-color: none;
-	}
+  .card-leaderboard {
+    width: 75% !important;
+    background-color: none;
+  }
 
-	.github-stats img {
-		max-width: 90%;
-	}
+  .github-stats img {
+    max-width: 90%;
+  }
 
-	.github-image {
-		border-radius: 50%;
-		width: 60px;
-		height: 60px;
-	}
+  .github-image {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+  }
 
-	.leaderboard-table {
-		margin: 25px 50px;
-	}
+  .leaderboard-table {
+    margin: 25px 50px;
+  }
 }
 
 body {
-	background-color: #f5f5f9;
-	margin-bottom: 50px;
+  background-color: #f5f5f9;
+  margin-bottom: 50px;
 }
 h2 {
-	margin-bottom: 20px;
-	margin-top: 20px;
-	font-weight: 700;
-	text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-weight: 700;
+  text-align: center;
 }
 
 .card {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	margin: 20px 30px;
-	background-color: white;
-	border-radius: 0.375rem;
-	padding: 1.5em;
-	font-size: 1.2em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 20px 30px;
+  background-color: white;
+  border-radius: 0.375rem;
+  padding: 1.5em;
+  font-size: 1.2em;
 }
 
 a {
-	color: black;
+  color: black;
 }
 
 .info {
-	p {
-		margin-top: 5px;
-		margin: 0px;
-		text-align: left;
-	}
+  p {
+    margin-top: 5px;
+    margin: 0px;
+    text-align: left;
+  }
 
-	.title {
-		font-size: 500;
-		font-weight: bold;
-	}
+  .title {
+    font-size: 500;
+    font-weight: bold;
+  }
 
-	.location,
-	.description {
-		font-size: medium;
-		font-weight: 400;
-	}
+  .location,
+  .description {
+    font-size: medium;
+    font-weight: 400;
+  }
 
-	.dates {
-		font-size: small;
-		color: #404040;
-	}
+  .dates {
+    font-size: small;
+    color: #404040;
+  }
 }
 
 .icon {
-	width: 70px;
-	height: 70px;
-	margin-right: 20px;
-	padding: 10px;
+  width: 70px;
+  height: 70px;
+  margin-right: 20px;
+  padding: 10px;
 
-	img {
-		width: 100%;
-	}
+  img {
+    width: 100%;
+  }
 }

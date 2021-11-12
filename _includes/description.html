@@ -1,51 +1,51 @@
-<h2 class="fellow-container-heading">Meet the Pod</h2>
+<h2 class="heading" data-aos="fade-up" data-aos-duration="500">Meet the Pod</h2>
 
 <section>
-	<div class="container">
-		<div class="row">
-			<div class="col-12">
-				<div
-					id="carousel-demo"
-					class="carousel slide large-carousel"
-					data-ride="carousel"
-				>
-					<div class="carousel-inner">
-						{% for i in (0...3)%} {% if i == 0 %}
-						<div class="carousel-item active">
-							<div class="row justify-content-center col-12 container">
-								{% for j in (0...12) limit: 3 %} {% include fellows.html %} {%
-								endfor %}
-							</div>
-						</div>
-						{% endif %}
-						<div class="carousel-item">
-							<div class="row justify-content-center col-12 container">
-								{% for j in (0...12) limit: 3 offset:continue %} {% include
-								fellows.html %} {% endfor %}
-							</div>
-						</div>
-						{% endfor %}
-					</div>
-				</div>
-			</div>
-			<div class="col-12 text-center controllers">
-				<a
-					class="btn btn-primary mb-3 mr-1"
-					href="#carousel-demo"
-					role="button"
-					data-slide="prev"
-				>
-					<i class="fa fa-arrow-left"></i>
-				</a>
-				<a
-					class="btn btn-primary mb-3"
-					href="#carousel-demo"
-					role="button"
-					data-slide="next"
-				>
-					<i class="fa fa-arrow-right"></i>
-				</a>
-			</div>
-		</div>
-	</div>
+  <div class="container" data-aos="fade-up" data-aos-duration="700">
+    <div class="row">
+      <div class="col-12">
+        <div
+          id="carousel-demo"
+          class="carousel slide large-carousel"
+          data-ride="carousel"
+        >
+          <div class="carousel-inner">
+            {% for i in (0...3)%} {% if i == 0 %}
+            <div class="carousel-item active">
+              <div class="row justify-content-center col-12 container">
+                {% for j in (0...12) limit: 3 %} {% include fellows.html %} {%
+                endfor %}
+              </div>
+            </div>
+            {% endif %}
+            <div class="carousel-item">
+              <div class="row justify-content-center col-12 container">
+                {% for j in (0...12) limit: 3 offset:continue %} {% include
+                fellows.html %} {% endfor %}
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div class="col-12 text-center controllers">
+        <a
+          class="btn btn-primary mb-3 mr-1"
+          href="#carousel-demo"
+          role="button"
+          data-slide="prev"
+        >
+          <i class="fa fa-arrow-left"></i>
+        </a>
+        <a
+          class="btn btn-primary mb-3"
+          href="#carousel-demo"
+          role="button"
+          data-slide="next"
+        >
+          <i class="fa fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
 </section>
